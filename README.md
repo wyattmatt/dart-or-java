@@ -86,20 +86,20 @@ rmdir /s /q bin 2>nul && mkdir bin
 
 # For PowerShell
 # Run each example individually (cleaning bin directory between runs)
-javac -d bin ClassAndObject.java && java -cp bin ClassAndObject
-Remove-Item -Recurse -Force bin && mkdir bin
+javac -d bin ClassAndObject.java; java -cp bin ClassAndObject
+Remove-Item -Recurse -Force bin; mkdir bin
 
-javac -d bin Encapsulation.java && java -cp bin Encapsulation
-Remove-Item -Recurse -Force bin && mkdir bin
+javac -d bin Encapsulation.java; java -cp bin Encapsulation
+Remove-Item -Recurse -Force bin; mkdir bin
 
-javac -d bin Inheritance.java && java -cp bin Inheritance
-Remove-Item -Recurse -Force bin && mkdir bin
+javac -d bin Inheritance.java; java -cp bin Inheritance
+Remove-Item -Recurse -Force bin; mkdir bin
 
-javac -d bin Polymorphism.java && java -cp bin Polymorphism
-Remove-Item -Recurse -Force bin && mkdir bin
+javac -d bin Polymorphism.java; java -cp bin Polymorphism
+Remove-Item -Recurse -Force bin; mkdir bin
 
-javac -d bin Abstraction.java && java -cp bin Abstraction
-Remove-Item -Recurse -Force bin && mkdir bin
+javac -d bin Abstraction.java; java -cp bin Abstraction
+Remove-Item -Recurse -Force bin; mkdir bin
 ```
 
 ## 📚 Core Concepts Demonstrated
@@ -261,3 +261,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Happy Learning! 🚀**
 
 _This project aims to make OOP concepts accessible and understandable through practical examples and clear comparisons between Dart and Java._
+
