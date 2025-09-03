@@ -22,12 +22,13 @@ dart-or-java/
 │   ├── inheritance.dart           # Extends, super, method overriding
 │   ├── polymorphism.dart          # Runtime polymorphism, interfaces
 │   └── abstraction.dart           # Abstract classes, contracts
-├── java/                          # Java implementations
-│   ├── class_and_object.java      # Classes, objects, constructors
-│   ├── encapsulation.java         # Private fields, access modifiers
-│   ├── inheritance.java           # Extends, super, method overriding
-│   ├── polymorphism.java          # Runtime polymorphism, interfaces
-│   └── abstraction.java           # Abstract classes, interfaces
+├── javac/                         # Java implementations
+│   ├── ClassAndObject.java        # Classes, objects, constructors
+│   ├── Encapsulation.java         # Private fields, access modifiers
+│   ├── Inheritance.java           # Extends, super, method overriding
+│   ├── Polymorphism.java          # Runtime polymorphism, interfaces
+│   ├── Abstraction.java           # Abstract classes, interfaces
+│   └── bin/                       # Compiled .class files
 ├── LICENSE                        # MIT License
 └── README.md                      # This documentation
 ```
@@ -63,15 +64,42 @@ dart run abstraction.dart
 ### Java Examples
 
 ```bash
-# Navigate to the java directory
-cd java
+# Navigate to the javac directory
+cd javac
 
-# Compile and run individual examples
-javac class_and_object.java && java class_and_object
-javac encapsulation.java && java encapsulation
-javac inheritance.java && java inheritance
-javac polymorphism.java && java polymorphism
-javac abstraction.java && java abstraction
+# For Command Prompt (CMD)
+# Run each example individually (cleaning bin directory between runs)
+javac -d bin ClassAndObject.java && java -cp bin ClassAndObject
+rmdir /s /q bin 2>nul && mkdir bin
+
+javac -d bin Encapsulation.java && java -cp bin Encapsulation
+rmdir /s /q bin 2>nul && mkdir bin
+
+javac -d bin Inheritance.java && java -cp bin Inheritance
+rmdir /s /q bin 2>nul && mkdir bin
+
+javac -d bin Polymorphism.java && java -cp bin Polymorphism
+rmdir /s /q bin 2>nul && mkdir bin
+
+javac -d bin Abstraction.java && java -cp bin Abstraction
+rmdir /s /q bin 2>nul && mkdir bin
+
+# For PowerShell
+# Run each example individually (cleaning bin directory between runs)
+javac -d bin ClassAndObject.java && java -cp bin ClassAndObject
+Remove-Item -Recurse -Force bin && mkdir bin
+
+javac -d bin Encapsulation.java && java -cp bin Encapsulation
+Remove-Item -Recurse -Force bin && mkdir bin
+
+javac -d bin Inheritance.java && java -cp bin Inheritance
+Remove-Item -Recurse -Force bin && mkdir bin
+
+javac -d bin Polymorphism.java && java -cp bin Polymorphism
+Remove-Item -Recurse -Force bin && mkdir bin
+
+javac -d bin Abstraction.java && java -cp bin Abstraction
+Remove-Item -Recurse -Force bin && mkdir bin
 ```
 
 ## 📚 Core Concepts Demonstrated
